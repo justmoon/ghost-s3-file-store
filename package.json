@@ -8,7 +8,9 @@
     "url": "git://github.com/christopherhein/ghost-s3-file-store.git"
   },
   "dependencies": {
-    "aws-sdk": "^2.1.4"
+    "aws-sdk": "^2.1.4",
+    "bluebird": "2.3.10",
+    "fs-extra": "0.12.0"
   },
   "keywords": [
     "ghost",

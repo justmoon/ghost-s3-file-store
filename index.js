@@ -5,10 +5,10 @@ var express   = require('express'),
     path      = require('path'),
     util      = require('util'),
     Promise   = require('bluebird'),
-    errors    = require('../../core/server/errors'),
-    config    = require('../../core/server/config'),
-    utils     = require('../..//core/server/utils'),
-    baseStore = require('../../core/server/storage/base'),
+    errors    = require('ghost/core/server/errors'),
+    config    = require('ghost/core/server/config'),
+    utils     = require('ghost/core/server/utils'),
+    baseStore = require('ghost/core/server/storage/base'),
     AWS       = require('aws-sdk'),
     awsConfig,
     s3;
@@ -16,7 +16,7 @@ var express   = require('express'),
 function GhostS3FileStore() {
   awsConfig = config.aws;
   AWS.config.update(awsConfig);
-  
+
   s3 = new AWS.S3({
     accessKeyId: awsConfig.accessKeyId,
     secretAccessKey: awsConfig.secretAccessKey,
